@@ -57,3 +57,24 @@ CREATE TABLE transactions (
 
 CREATE SEQUENCE invoice_seq START 1 INCREMENT 1;
 
+CREATE TABLE banners (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY, 
+    banner_name VARCHAR(255) NOT NULL,
+    banner_image TEXT NOT NULL, 
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO banners (banner_name, banner_image, description, created_at) VALUES
+('Banner 1', 'https://nutech-integrasi.app/dummy.jpg', 'Lerem Ipsum Dolor sit amet', CURRENT_TIMESTAMP),
+('Banner 2', 'https://nutech-integrasi.app/dummy.jpg', 'Lerem Ipsum Dolor sit amet', CURRENT_TIMESTAMP),
+('Banner 3', 'https://nutech-integrasi.app/dummy.jpg', 'Lerem Ipsum Dolor sit amet', CURRENT_TIMESTAMP),
+('Banner 4', 'https://nutech-integrasi.app/dummy.jpg', 'Lerem Ipsum Dolor sit amet', CURRENT_TIMESTAMP),
+('Banner 5', 'https://nutech-integrasi.app/dummy.jpg', 'Lerem Ipsum Dolor sit amet', CURRENT_TIMESTAMP),
+('Banner 6', 'https://nutech-integrasi.app/dummy.jpg', 'Lerem Ipsum Dolor sit amet', CURRENT_TIMESTAMP);
+
+
+
+
